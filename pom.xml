@@ -14,7 +14,7 @@
         <junit.version>4.13.2</junit.version>
         <cucumber.version>6.9.0</cucumber.version>
         <maven.compiler.version>3.8.1</maven.compiler.version>
-        <maven.surefire.version>2.22.2</maven.surefire.version>
+        <maven.surefire.version>3.0.0-M4</maven.surefire.version>
     </properties>
 
 
@@ -46,11 +46,6 @@
             <version>4.8.1</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>31.1-jre</version>
-        </dependency>
 
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
@@ -59,36 +54,12 @@
         </dependency>
 
         <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-remote-driver</artifactId>
-            <version>4.8.1</version>
-            <scope>test</scope>
-            <type>jar</type>
-        </dependency>
-
-
-
-
-        <dependency>
             <groupId>tech.grasshopper</groupId>
             <artifactId>extentreports-cucumber6-adapter</artifactId>
             <version>2.13.0</version>
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.14.3</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-testng</artifactId>
-            <version>${cucumber.version}</version>
-            <scope>test</scope>
-        </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
         <dependency>
@@ -124,7 +95,6 @@
         </dependency>
 
 
-
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-picocontainer</artifactId>
@@ -132,12 +102,22 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-remote-driver</artifactId>
+            <version>4.8.1</version>
+            <scope>test</scope>
+            <type>jar</type>
+        </dependency>
 
-
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>31.1-jre</version>
+        </dependency>
     </dependencies>
 
     <build>
-
         <resources>
             <resource>
                 <filtering>true</filtering>
@@ -147,10 +127,6 @@
                 </includes>
             </resource>
         </resources>
-
-
-
-
 
 
         <plugins>
@@ -164,20 +140,20 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
+
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.version}</version>
                 <configuration>
-                    <includes>
-                        <include>**/AgentSettlingRunnerTest.java</include>
-                    </includes>
-                    <parallel>all</parallel>
-                    <!-- <threadCount>10</threadCount> -->
-                    <useUnlimitedThreads>true</useUnlimitedThreads>
-                    <perCoreThreadCount>true</perCoreThreadCount>
+                    <parallel>methods</parallel>
+                    <!--     <useUnlimitedThreads>true</useUnlimitedThreads> -->
+                         <threadCount>5</threadCount>
+                    <perCoreThreadCount>false</perCoreThreadCount>
                 </configuration>
             </plugin>
+
 
             <!-- cucumber reporting -->
             <plugin>
@@ -192,7 +168,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>AP-RegressionsmritiBranch1 - Selenium4</projectName>  <!-- Replace with project name -->
+                            <projectName>AP-RegressionsmritiBranch1_SeleniumGrid4_Jenkins</projectName>  <!-- Replace with project name -->
                             <outputDirectory>target/cucumber-reports/advanced-reports</outputDirectory>
                             <cucumberOutput>target/cucumber-reports/CucumberTestReport.json</cucumberOutput>
                             <buildNumber>1</buildNumber>

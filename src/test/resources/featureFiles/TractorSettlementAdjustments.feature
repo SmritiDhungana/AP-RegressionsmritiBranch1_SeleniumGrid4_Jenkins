@@ -28,7 +28,7 @@ Feature: Tractor Settlement Adjustments Process Feature
       | unitNo  | startDateFrom | startDateTo  | environment  | browser  | username     | password      | tableName                           | tableName1                     | tableName2                   |
      # | "11122" | "01/01/2022"  | "11/20/2022" | "ebhstaging" | "chrome" | "SmritiTest" | "Legendary@1" | "[EBH].[dbo].[TRACTOR_ADJUSTMENTS]" | "[EBH].[dbo].[TRACTOR_VENDOR]" | "[EBH].[dbo].[AP_PAY_CODES]" |
     #  | "11084" | "09/01/2022"  | "11/20/2022" | "ebhstaging" | "chrome" | "SmritiTest" | "Legendary@1" | "[EBH].[dbo].[TRACTOR_ADJUSTMENTS]" | "[EBH].[dbo].[TRACTOR_VENDOR]" | "[EBH].[dbo].[AP_PAY_CODES]" |
-      | "14022" | "01/01/2022"  | "11/20/2022" | "ebhstaging" | "edge" | "SmritiTest" | "Legendary@1" | "[EBH].[dbo].[TRACTOR_ADJUSTMENTS]" | "[EBH].[dbo].[TRACTOR_VENDOR]" | "[EBH].[dbo].[AP_PAY_CODES]" |
+      | "14022" | "01/01/2022"  | "11/20/2022" | "ebhstaging" | "chrome" | "SmritiTest" | "Legendary@1" | "[EBH].[dbo].[TRACTOR_ADJUSTMENTS]" | "[EBH].[dbo].[TRACTOR_VENDOR]" | "[EBH].[dbo].[AP_PAY_CODES]" |
 
 
 

@@ -47,7 +47,7 @@ Feature: Agent Settlement Adjustments Process Feature
     Then Close all open Browsers on EBH for Agent Settlement Adjustments
     Examples:
       | VendorID | AgentCode | environment | browser  | username         | password      | tableName                                      |
-      | "10008"  | "YNN"     | "ebhlaunch" | "chrome" | "SMRITIDHUNGANA" | "Legendary@1" | "[EBHLaunch].[dbo].[usp_GetVendorCodeDetails]" |
+      | "10008"  | "YNN"     | "ebhlaunch" | "MicrosoftEdge" | "SMRITIDHUNGANA" | "Legendary@1" | "[EBHLaunch].[dbo].[usp_GetVendorCodeDetails]" |
    #   | "99999"  | "HCI"     | "ebhprod"   | "chrome" | "SMRITIDHUNGANA" | "Smr1tiD@2022" | "[EBH].[dbo].[usp_GetVendorCodeDetails]" |
 
 
@@ -100,7 +100,7 @@ Feature: Agent Settlement Adjustments Process Feature
     Examples:
       | VendorCode | PayCode | Status   | Frequency | Amount | ApplytoAgent | StartDate    | EndDate      | environment | browser  | username         | password      | tableName                               |
     #  | "10000"    | "AB"    | "ACTIVE" | "S"       | "3.33" | "BAL"        | "03/25/2023" | "05/30/2023" | "ebhlaunch" | "chrome" | "SMRITIDHUNGANA" | "Legendary@1" | "[EBHLaunch].[dbo].[AGENT_ADJUSTMENTS]" |
-      | "10000"    | "AA"    | "ACTIVE" | "S"       | "1.33" | "BAL"        | "03/10/2023" | "05/30/2023" | "ebhlaunch" | "chrome" | "SMRITIDHUNGANA" | "Legendary@1" | "[EBHLaunch].[dbo].[AGENT_ADJUSTMENTS]" |
+      | "10000"    | "AA"    | "ACTIVE" | "S"       | "1.33" | "BAL"        | "03/25/2023" | "05/30/2023" | "ebhlaunch" | "chrome" | "SMRITIDHUNGANA" | "Legendary@1" | "[EBHLaunch].[dbo].[AGENT_ADJUSTMENTS]" |
 
 
     #34
@@ -137,6 +137,7 @@ Feature: Agent Settlement Adjustments Process Feature
     #  | "8112"     | "AB"    | "ACTIVE" | "S"       | "3.33" | "KBI"        | "2023-02-25" | "02/25/2023" | "05/30/2023" | "ebhlaunch" | "chrome" | "SMRITIDHUNGANA" | "Legendary@1" | "[EBHLaunch].[dbo].[AGENT_ADJUSTMENTS]" |
     #  | "10512"     | "AB"    | "ACTIVE" | "S"       | "3.33" | "ZWG"        | "2023-03-09" | "03/09/2023" | "05/30/2023" | "ebhlaunch" | "chrome" | "SMRITIDHUNGANA" | "Legendary@1" | "[EBHLaunch].[dbo].[AGENT_ADJUSTMENTS]" |
       | "14325"     | "AB"    | "ACTIVE" | "S"       | "3.33" | "EMA"        | "2023-03-10" | "03/10/2023" | "05/30/2023" | "ebhlaunch" | "chrome" | "SMRITIDHUNGANA" | "Legendary@1" | "[EBHLaunch].[dbo].[AGENT_ADJUSTMENTS]" |
+    #  | "8585"     | "AB"    | "ACTIVE" | "S"       | "3.33" | "CRG"        | "2023-03-25" | "03/25/2023" | "05/30/2023" | "ebhlaunch" | "chrome" | "SMRITIDHUNGANA" | "Legendary@1" | "[EBHLaunch].[dbo].[AGENT_ADJUSTMENTS]" |
 
     #Enter new VendorCode/ApplyToAgent/StartDate/EndDate everytime before running test
 
@@ -173,7 +174,8 @@ Feature: Agent Settlement Adjustments Process Feature
 #AEP showing 3 on apply to agent dropdown
     #  | "PHL"     | "AB"    | "ACTIVE" | "S"       | "3.33" | "PHL"        | "2023-03-09" | "03/09/2023" | "05/30/2023" | "ebhlaunch" | "chrome" | "SMRITIDHUNGANA" | "Legendary@1" | "[EBHLaunch].[dbo].[AGENT_ADJUSTMENTS]" |
     #  | "CNJ"     | "AB"    | "ACTIVE" | "S"       | "3.33" | "CNJ"        | "2023-03-10" | "03/10/2023" | "05/30/2023" | "ebhlaunch" | "chrome" | "SMRITIDHUNGANA" | "Legendary@1" | "[EBHLaunch].[dbo].[AGENT_ADJUSTMENTS]" |
-      | "CHT"     | "AB"    | "ACTIVE" | "S"       | "3.33" | "CHT"        | "2023-03-19" | "03/19/2023" | "05/30/2023" | "ebhlaunch" | "chrome" | "SMRITIDHUNGANA" | "Legendary@1" | "[EBHLaunch].[dbo].[AGENT_ADJUSTMENTS]" |
+    #  | "CHT"     | "AB"    | "ACTIVE" | "S"       | "3.33" | "CHT"        | "2023-03-19" | "03/19/2023" | "05/30/2023" | "ebhlaunch" | "chrome" | "SMRITIDHUNGANA" | "Legendary@1" | "[EBHLaunch].[dbo].[AGENT_ADJUSTMENTS]" |
+      | "AVA"     | "AB"    | "ACTIVE" | "S"       | "3.33" | "AVA"        | "2023-03-25" | "03/25/2023" | "05/30/2023" | "ebhlaunch" | "chrome" | "SMRITIDHUNGANA" | "Legendary@1" | "[EBHLaunch].[dbo].[AGENT_ADJUSTMENTS]" |
 
     #Enter new AgentCode/ApplyToAgent/StartDate/EndDate everytime before running test
 
@@ -204,7 +206,7 @@ Feature: Agent Settlement Adjustments Process Feature
     Examples:
       | VendorCode | StartDate    | EndDate      | PayCode | Status   | Status1    | Frequency | Amount  | ApplytoAgent | MaxLimit1 | TotalToDate | MaxLimit2 | MaxLimit3 | environment | browser  | username         | password      | tableName                               |
     #  | "10000"    | "02/27/2023" | "05/30/2023" | "AD"    | "ACTIVE" | "COMPLETE" | "W"       | "20.00" | "BAL"        | "1.50"    | "2.50"      | "2.50"    | "4.50"    | "ebhlaunch" | "chrome" | "SMRITIDHUNGANA" | "Legendary@1" | "[EBHLaunch].[dbo].[AGENT_ADJUSTMENTS]" |
-      | "6257"     | "03/10/2023" | "05/30/2023" | "AD"    | "ACTIVE" | "COMPLETE" | "W"       | "20.00" | "AAR"        | "1.50"    | "2.50"      | "2.50"    | "4.50"    | "ebhlaunch" | "chrome" | "SMRITIDHUNGANA" | "Legendary@1" | "[EBHLaunch].[dbo].[AGENT_ADJUSTMENTS]" |
+      | "6257"     | "03/25/2023" | "05/30/2023" | "AD"    | "ACTIVE" | "COMPLETE" | "W"       | "20.00" | "AAR"        | "1.50"    | "2.50"      | "2.50"    | "4.50"    | "ebhlaunch" | "chrome" | "SMRITIDHUNGANA" | "Legendary@1" | "[EBHLaunch].[dbo].[AGENT_ADJUSTMENTS]" |
 
 
 

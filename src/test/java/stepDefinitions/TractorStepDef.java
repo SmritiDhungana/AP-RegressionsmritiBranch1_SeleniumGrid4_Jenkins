@@ -74,7 +74,6 @@ public class TractorStepDef {
         }
     }
 
-
     @Given("^Run Test for Environment \"([^\"]*)\" on Browser \"([^\"]*)\" for EBH Tractors and Enter the url$")
     public void run_Test_for_Environment_on_Browser_for_EBH_Tractors_and_Enter_the_url(String environment, String browser) throws MalformedURLException {
         URL = browserDriverInitialization.getDataFromPropertiesFileForEBH(environment, browser);
@@ -89,7 +88,7 @@ public class TractorStepDef {
             EdgeOptions options = new EdgeOptions();
             options.merge(cap);
         }
-        driver = new RemoteWebDriver(new URL("http://192.168.0.11:4444"), cap);
+        driver = new RemoteWebDriver(new URL("http://192.168.0.14:4444"), cap);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));

@@ -10,6 +10,7 @@ import org.apache.poi.ss.usermodel.FormulaEvaluator;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -20,7 +21,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+
 import stepDefinitions.CommonUtils.BrowserDriverInitialization;
 import stepDefinitions.Pages.*;
 
@@ -54,7 +55,7 @@ public class AgentSettlementAdjustmentsStepDef {
     BrowserDriverInitialization browserDriverInitialization = new BrowserDriverInitialization();
 
 
-    //...................................../ 30 @AgentSettlementAdjustmentsVendorId /..........................................//
+    //...................................../ Background /..........................................//
 
     @After("@FailureScreenShot2")
     public void takeScreenshotOnFailure2(Scenario scenario) {
@@ -82,7 +83,7 @@ public class AgentSettlementAdjustmentsStepDef {
             EdgeOptions options = new EdgeOptions();
             options.merge(cap);
         }
-        driver = new RemoteWebDriver(new URL("http://192.168.0.11:4444"), cap);
+        driver = new RemoteWebDriver(new URL("http://192.168.0.14:4444"), cap);
     }
 
     @And("^Enter the url for EBH Agent Settlement Adjustments$")
@@ -124,14 +125,13 @@ public class AgentSettlementAdjustmentsStepDef {
         driver.findElement(corporatePage.settlements).click();
     }
 
-
     @Then("^Close all open Browsers on EBH for Agent Settlement Adjustments$")
     public void Close_all_open_Browsers_on_EBH_for_Agent_Settlement_Adjustments() {
         driver.close();
         driver.quit();
     }
 
-
+    //...................................../ 30 @AgentSettlementAdjustmentsVendorId /..........................................//
     @And("^Navigate to Agent Settlement Adjustments$")
     public void Navigate_to_Agent_Settlement_Adjustments() {
         driver.findElement(settlementsPage.AgentSettlementAdjustments).click();
@@ -244,7 +244,7 @@ public class AgentSettlementAdjustmentsStepDef {
                     }
                 }
                 if (booleanValue) {
-                    Assert.assertTrue(true, "AssertValue is present !!");
+                    Assert.assertTrue( "AssertValue is present !!", true);
                 } else {
                     fail("AssertValue is not present!!");
                 }
@@ -265,7 +265,7 @@ public class AgentSettlementAdjustmentsStepDef {
                     }
                 }
                 if (booleanValue1) {
-                    Assert.assertTrue(true, "AssertValue is present !!");
+                    Assert.assertTrue( "AssertValue is present !!", true);
                 } else {
                     fail("AssertValue is not present!!");
                 }
@@ -389,7 +389,7 @@ public class AgentSettlementAdjustmentsStepDef {
                     }
                 }
                 if (booleanValue) {
-                    Assert.assertTrue(true, "AssertValue is present !!");
+                    Assert.assertTrue( "AssertValue is present !!", true);
                 } else {
                     fail("AssertValue is not present!!");
                 }
@@ -406,7 +406,7 @@ public class AgentSettlementAdjustmentsStepDef {
                     }
                 }
                 if (booleanValue1) {
-                    Assert.assertTrue(true, "AssertValue is present !!");
+                    Assert.assertTrue( "AssertValue is present !!", true);
                 } else {
                     fail("AssertValue is not present!!");
                 }
@@ -504,7 +504,7 @@ public class AgentSettlementAdjustmentsStepDef {
                     }
                 }
                 if (booleanValue) {
-                    Assert.assertTrue(true, "AssertValue is present !!");
+                    Assert.assertTrue( "AssertValue is present !!", true);
                 } else {
                     fail("AssertValue is not present!!");
                 }
@@ -604,7 +604,7 @@ public class AgentSettlementAdjustmentsStepDef {
                     }
                 }
                 if (booleanValue) {
-                    Assert.assertTrue(true, "AssertValue is present !!");
+                    Assert.assertTrue( "AssertValue is present !!", true);
                 } else {
                     fail("AssertValue is not present!!");
                 }
@@ -621,7 +621,7 @@ public class AgentSettlementAdjustmentsStepDef {
                     }
                 }
                 if (booleanValue1) {
-                    Assert.assertTrue(true, "AssertValue is present !!");
+                    Assert.assertTrue( "AssertValue is present !!", true);
                 } else {
                     fail("AssertValue is not present!!");
                 }
@@ -709,7 +709,7 @@ public class AgentSettlementAdjustmentsStepDef {
                     }
                 }
                 if (booleanValue) {
-                    Assert.assertTrue(true, "AssertValue is present !!");
+                    Assert.assertTrue( "AssertValue is present !!", true);
                 } else {
                     fail("AssertValue is not present!!");
                 }
@@ -726,7 +726,7 @@ public class AgentSettlementAdjustmentsStepDef {
                     }
                 }
                 if (booleanValue1) {
-                    Assert.assertTrue(true, "AssertValue is present !!");
+                    Assert.assertTrue( "AssertValue is present !!", true);
                 } else {
                     fail("AssertValue is not present!!");
                 }
@@ -813,7 +813,7 @@ public class AgentSettlementAdjustmentsStepDef {
                     }
                 }
                 if (booleanValue) {
-                    Assert.assertTrue(true, "AssertValue is present !!");
+                    Assert.assertTrue( "AssertValue is present !!", true);
                 } else {
                     fail("AssertValue is not present!!");
                 }
@@ -831,7 +831,7 @@ public class AgentSettlementAdjustmentsStepDef {
                     }
                 }
                 if (booleanValue1) {
-                    Assert.assertTrue(true, "AssertValue is present !!");
+                    Assert.assertTrue( "AssertValue is present !!", true);
                 } else {
                     fail("AssertValue is not present!!");
                 }
@@ -2596,7 +2596,7 @@ public class AgentSettlementAdjustmentsStepDef {
         }
 
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//*[@id=\"btnOK\"]/img")).click();
+       // driver.findElement(By.xpath("//*[@id=\"btnOK\"]/img")).click();
 
         driver.findElement(agentSettlementAdjustmentsPage.Save).click();
         driver.findElement(By.xpath("//*[@id=\"Divpopup\"]")).isDisplayed();

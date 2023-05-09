@@ -83,7 +83,7 @@ public class TractorSettlementAdjustmentsStepDef {
             EdgeOptions options = new EdgeOptions();
             options.merge(cap);
         }
-        driver = new RemoteWebDriver(new URL("http://192.168.0.11:4444"), cap);
+        driver = new RemoteWebDriver(new URL("http://192.168.0.14:4444"), cap);
     }
 
     @And("^Enter the url for EBH Tractor Settlement Adjustments$")
@@ -125,6 +125,10 @@ public class TractorSettlementAdjustmentsStepDef {
         driver.findElement(corporatePage.settlements).click();
     }
 
+    @And("^Navigate to Tractor Settlement Adjustments$")
+    public void Navigate_to_Tractor_Settlement_Adjustments() {
+        driver.findElement(settlementsPage.TractorSettlementAdjustments).click();
+    }
 
     @Then("^Close all open Browsers on EBH for Tractor Settlement Adjustments$")
     public void Close_all_open_Browsers_on_EBH_for_Tractor_Settlement_Adjustments() {
@@ -133,10 +137,6 @@ public class TractorSettlementAdjustmentsStepDef {
     }
 
 
-    @And("^Navigate to Tractor Settlement Adjustments$")
-    public void Navigate_to_Tractor_Settlement_Adjustments() {
-        driver.findElement(settlementsPage.TractorSettlementAdjustments).click();
-    }
 
 
     //...................................../ #101  @TractorSettlementAdjustmentsUnitNo /..........................................//

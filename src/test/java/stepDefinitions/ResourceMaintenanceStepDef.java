@@ -54,6 +54,7 @@ public class ResourceMaintenanceStepDef {
     BrowserDriverInitialization browserDriverInitialization = new BrowserDriverInitialization();
     private static Statement stmt;
 
+
 //............................................/ Background /................................................//
 
     @After("@FailureScreenShot9")
@@ -82,7 +83,7 @@ public class ResourceMaintenanceStepDef {
             EdgeOptions options = new EdgeOptions();
             options.merge(cap);
         }
-        driver = new RemoteWebDriver(new URL("http://192.168.0.11:4444"), cap);
+        driver = new RemoteWebDriver(new URL("http://192.168.0.14:4444"), cap);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));

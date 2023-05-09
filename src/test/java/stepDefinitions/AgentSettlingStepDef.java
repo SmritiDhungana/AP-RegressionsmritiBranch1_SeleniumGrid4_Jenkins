@@ -87,10 +87,8 @@ public class AgentSettlingStepDef {
         }
     }
 
-
     @Given("^Run Test for \"([^\"]*)\" on Browser \"([^\"]*)\" and Enter the url for EBH$")
     public void run_Test_for_on_Browser_and_Enter_the_url_for_EBH(String environment, String browser) throws MalformedURLException, InterruptedException {
-
         URL = browserDriverInitialization.getDataFromPropertiesFileForEBH(environment, browser);
         if (browser.equals("chrome")) {
             cap.setPlatform(Platform.ANY);
@@ -103,7 +101,7 @@ public class AgentSettlingStepDef {
             EdgeOptions options = new EdgeOptions();
             options.merge(cap);
         }
-        driver = new RemoteWebDriver(new URL("http://192.168.0.11:4444"), cap);
+        driver = new RemoteWebDriver(new URL("http://192.168.0.14:4444"), cap);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));

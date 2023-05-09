@@ -75,8 +75,8 @@ public class BCPDTractorValidationStepDef {
     Logger log = Logger.getLogger("BCPDTractorValidationStepDef");
     private static Statement stmt;
 
-    //............................................/ Background /................................................//
 
+    //............................................/ Background /................................................//
     @After("@FailureScreenShot5")
     public void takeScreenshotOnFailure5(Scenario scenario) {
         if (scenario.isFailed()) {
@@ -88,7 +88,6 @@ public class BCPDTractorValidationStepDef {
             driver.quit();
         }
     }
-
 
     @Given("^run test for \"([^\"]*)\" on browser \"([^\"]*)\" for Tractor Validation$")
     public void runTestForOnBrowser_for_Tractor_Validation(String environment, String browser) throws MalformedURLException {
@@ -104,7 +103,7 @@ public class BCPDTractorValidationStepDef {
             EdgeOptions options = new EdgeOptions();
             options.merge(cap);
         }
-        driver = new RemoteWebDriver(new URL("http://192.168.0.11:4444"), cap);
+        driver = new RemoteWebDriver(new URL("http://192.168.0.14:4444"), cap);
     }
 
     @Given("^enter the url for Tractor Validation$")

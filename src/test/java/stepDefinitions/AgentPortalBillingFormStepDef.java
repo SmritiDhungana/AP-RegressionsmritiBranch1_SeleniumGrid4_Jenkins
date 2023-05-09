@@ -107,7 +107,7 @@ public class AgentPortalBillingFormStepDef {
             EdgeOptions options = new EdgeOptions();
             options.merge(cap);
         }
-        driver = new RemoteWebDriver(new URL("http://192.168.0.11:4444"), cap);
+        driver = new RemoteWebDriver(new URL("http://192.168.0.14:4444"), cap);
     }
 
     @Given("^enter the url$")
@@ -168,7 +168,7 @@ public class AgentPortalBillingFormStepDef {
             EdgeOptions options = new EdgeOptions();
             options.merge(cap);
         }
-        driver = new RemoteWebDriver(new URL("http://192.168.0.11:4444"), cap);
+        driver = new RemoteWebDriver(new URL("http://192.168.0.14:4444"), cap);
     }
 
     @Given("^enter the url of Agents Portal$")
@@ -202,6 +202,7 @@ public class AgentPortalBillingFormStepDef {
         LoginPage loginPage = new LoginPage(driver);
         usernameExpctd = username;
         driver.findElement(loginPage.username).sendKeys(usernameExpctd.toUpperCase());
+     //   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(loginPage.password));
         driver.findElement(loginPage.password).sendKeys(password);

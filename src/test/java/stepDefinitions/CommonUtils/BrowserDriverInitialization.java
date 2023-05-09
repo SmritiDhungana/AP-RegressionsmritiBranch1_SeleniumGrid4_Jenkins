@@ -45,7 +45,7 @@ public class BrowserDriverInitialization {
                 EdgeOptions options = new EdgeOptions();
                 options.merge(cap);
             }
-            driver = new RemoteWebDriver(new URL("http://192.168.0.11:4444"), cap);
+            driver = new RemoteWebDriver(new URL("http://192.168.0.14:4444"), cap);
             URL = "http://agentlaunch.evansdelivery.com/";
         } else if (environment.equals("staging")){
             if (browser.equals("chrome")) {
@@ -59,7 +59,7 @@ public class BrowserDriverInitialization {
                 EdgeOptions options = new EdgeOptions();
                 options.merge(cap);
             }
-            driver = new RemoteWebDriver(new URL("http://192.168.0.11:4444"), cap);
+            driver = new RemoteWebDriver(new URL("http://192.168.0.14:4444"), cap);
             URL = "https://staging.evansdelivery.com/login.aspx";
         }
         return URL;
@@ -80,7 +80,7 @@ public class BrowserDriverInitialization {
                     EdgeOptions options = new EdgeOptions();
                     options.merge(cap);
                 }
-                driver = new RemoteWebDriver(new URL("http://192.168.0.11:4444"), cap);
+                driver = new RemoteWebDriver(new URL("http://192.168.0.14:4444"), cap);
                 URL = "http://ebhlaunch.evansdelivery.com:8089/";
                 break;
             case "ebhprod":
@@ -95,7 +95,7 @@ public class BrowserDriverInitialization {
                     EdgeOptions options = new EdgeOptions();
                     options.merge(cap);
                 }
-                driver = new RemoteWebDriver(new URL("http://192.168.0.11:4444"), cap);
+                driver = new RemoteWebDriver(new URL("http://192.168.0.14:4444"), cap);
                 URL = "http://ebh.evansdelivery.com/";
                 break;
             case "ebhstaging":
@@ -110,7 +110,7 @@ public class BrowserDriverInitialization {
                     EdgeOptions options = new EdgeOptions();
                     options.merge(cap);
                 }
-                driver = new RemoteWebDriver(new URL("http://192.168.0.11:4444"), cap);
+                driver = new RemoteWebDriver(new URL("http://192.168.0.14:4444"), cap);
                 URL = "http://ebhstaging.evansdelivery.com:83/";
                 break;
         }
@@ -169,7 +169,7 @@ public class BrowserDriverInitialization {
                 EdgeOptions options = new EdgeOptions();
                 options.merge(cap);
             }
-            driver = new RemoteWebDriver(new URL("http://192.168.0.11:4444"), cap);
+            driver = new RemoteWebDriver(new URL("http://192.168.0.14:4444"), cap);
             URL = "https://chassislaunch.evansdelivery.com";
         } else if (environment.equals("ecstaging")) {
             if (browser.equals("chrome")) {
@@ -183,7 +183,7 @@ public class BrowserDriverInitialization {
                 EdgeOptions options = new EdgeOptions();
                 options.merge(cap);
             }
-            driver = new RemoteWebDriver(new URL("http://192.168.0.11:4444"), cap);
+            driver = new RemoteWebDriver(new URL("http://192.168.0.14:4444"), cap);
             URL = "https://chassisstaging.evansdelivery.com";
         }
         return URL;

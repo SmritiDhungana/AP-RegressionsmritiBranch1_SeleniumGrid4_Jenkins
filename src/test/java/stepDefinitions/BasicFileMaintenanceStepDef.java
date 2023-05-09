@@ -75,7 +75,7 @@ public class BasicFileMaintenanceStepDef {
             EdgeOptions options = new EdgeOptions();
             options.merge(cap);
         }
-        driver = new RemoteWebDriver(new URL("http://192.168.0.11:4444"), cap);
+        driver = new RemoteWebDriver(new URL("http://192.168.0.14:4444"), cap);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
@@ -323,7 +323,8 @@ public class BasicFileMaintenanceStepDef {
     }
 
     @And("^Navigate to the Location File page$")
-    public void Navigate_to_the_Location_File_page() {
+    public void Navigate_to_the_Location_File_page() throws InterruptedException {
+        Thread.sleep(2000);
         driver.findElement(basicFileMaintenancePage.LocationFile).click();
     }
 

@@ -33,7 +33,7 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 
-public class AARAgentManagementFileStepDef<log4jConfPath> {
+public class AARAgentManagementFileStepDef{
 
     public WebDriver driver;
     public DesiredCapabilities cap = new DesiredCapabilities();
@@ -66,7 +66,6 @@ public class AARAgentManagementFileStepDef<log4jConfPath> {
 
     @Given("Run Test for {string} on Browser {string} for AAR Agent Management and Enter the url")
     public void run_test_for_on_browser_for_aar_agent_management_and_enter_the_url(String environment, String browser) throws MalformedURLException {
-
         URL = browserDriverInitialization.getDataFromPropertiesFileForEBH(environment, browser);
         if (browser.equals("chrome")) {
             cap.setPlatform(Platform.ANY);
@@ -79,36 +78,20 @@ public class AARAgentManagementFileStepDef<log4jConfPath> {
             EdgeOptions options = new EdgeOptions();
             options.merge(cap);
         }
-        driver = new RemoteWebDriver(new URL("http://192.168.0.11:4444"), cap);
+        driver = new RemoteWebDriver(new URL("http://192.168.0.14:4444"), cap);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(150, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(150, TimeUnit.SECONDS);
         driver.get(URL);
 
-      /*  url = browserDriverInitialization.getDataFromPropertiesFileForEBH(environment, browser);
-        if (browser.equals("chrome")) {
-            driver = new ChromeDriver();
-        } else if (browser.equals("edge")) {
-            driver = new EdgeDriver();
-        }
-
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
-        driver.manage().timeouts().setScriptTimeout(150, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(150, TimeUnit.SECONDS);
-        driver.get(url);  */
     }
 
     @Given("Login to the Agents Portal with username {string} and password {string} for AAR Agent Management")
     public void login_to_the_agents_portal_with_username_and_password_for_aar_agent_management(String username, String password) {
         usernameExpected = username;
         driver.findElement(ebhLoginPage.username).sendKeys(usernameExpected.toUpperCase());
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(ebhLoginPage.username));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(ebhLoginPage.password));
         driver.findElement(ebhLoginPage.password).sendKeys(password);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(ebhLoginPage.signinButton));
         driver.findElement(ebhLoginPage.signinButton).click();
     }
 
@@ -117,7 +100,6 @@ public class AARAgentManagementFileStepDef<log4jConfPath> {
         driver.findElement(mainMenuPage.corporate).click();
         getAndSwitchToWindowHandles();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.findElement(corporatePage.settlements).click();
     }
 
@@ -126,7 +108,6 @@ public class AARAgentManagementFileStepDef<log4jConfPath> {
             driver.switchTo().window(winHandle);
         }
     }
-
 
     @Then("^Close all open Browsers on EBH for AAR Agent Management$")
     public void Close_all_open_Browsers_on_EBH_for_AAR_Agent_Management() {

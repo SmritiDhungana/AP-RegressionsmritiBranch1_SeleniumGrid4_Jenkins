@@ -18,7 +18,7 @@ Feature: Tractor Vendor Relationship Process Feature
     Then Close all open Browsers on EBH for Tractors
     Examples:
       | unitNumber | environment  | environment1       | browser  | username     | password      | tableName                      | tableName1                             |
-      | "172270"   | "ebhstaging" | "driver360staging" | "MicrosoftEdge" | "SmritiTest" | "Legendary@1" | "[ebh].[dbo].[TRACTOR_VENDOR]" | "[Driver360Staging].[dbo].[Equipment]" |
+      | "172270"   | "ebhstaging" | "driver360staging" | "chrome" | "SmritiTest" | "Legendary@1" | "[ebh].[dbo].[TRACTOR_VENDOR]" | "[Driver360Staging].[dbo].[Equipment]" |
 
     # 75
   @Regression @TractorVendorRelationship-VendorCode/Report @FailureScreenShot6
