@@ -184,7 +184,8 @@ Feature: Equipment Console Agent Adjustments Process Feature - Agent Reimburseme
     #  | "JH230130NSC09" | "AgentReview" | "AgentReview" | "AAR" | "191231" | "BillCustomer" | "FEDBRCA"  | "DCC"       | "7"      | "8"  | "6"       | "6"   | "18"     | "Automation Testing !!!" | "Testing !!!" | "eclaunch"   | "chrome" | "eqpb"   | "taffy"  |
     #  | "JH230131MSA06" | "AgentReview" | "AgentReview" | "ABC" | "102008" | "BillCustomer" | "FEDBRCA"  | "DCC"       | "7"      | "8"  | "6"       | "6"   | "18"     | "Automation Testing !!!" | "Testing !!!" | "eclaunch"   | "chrome" | "eqpb"   | "taffy"  |
     # | "JH230131CSA12" | "AgentReview" | "AgentReview" | "AAR" | "191231" | "BillCustomer" | "FEDBRCA"  | "DCC"       | "7"      | "8"  | "6"       | "6"   | "18"     | "Automation Testing !!!" | "Testing !!!" | "eclaunch"   | "chrome" | "eqpb"   | "taffy"  |
-      | "JH230131CSA14" | "AgentReview" | "AgentReview" | "AAR" | "191231" | "BillCustomer" | "FEDBRCA"  | "DCC"       | "7"      | "8"  | "6"       | "6"   | "18"     | "Automation Testing !!!" | "Testing !!!" | "eclaunch"   | "chrome" | "eqpb"   | "taffy"  |
+    #  | "JH230131CSA14" | "AgentReview" | "AgentReview" | "AAR" | "191231" | "BillCustomer" | "FEDBRCA"  | "DCC"       | "7"      | "8"  | "6"       | "6"   | "18"     | "Automation Testing !!!" | "Testing !!!" | "eclaunch"   | "chrome" | "eqpb"   | "taffy"  |
+      | "JH230131MSA30" | "AgentReview" | "AgentReview" | "ABC" | "102008" | "BillCustomer" | "FEDBRCA"  | "DCC"       | "7"      | "8"  | "6"       | "6"   | "18"     | "Automation Testing !!!" | "Testing !!!" | "eclaunch"   | "chrome" | "eqpb"   | "taffy"  |
 
             #Change InvoiceNo/Agent/ProNum everytime before running Test from @VerifyTaxAndAdminBillingCodesHaveBeenSetup&IdentifyINVOICE-BillCustomer
 
@@ -200,7 +201,8 @@ Feature: Equipment Console Agent Adjustments Process Feature - Agent Reimburseme
      # | "ebhlaunch" | "[Evans].[dbo].[ChassisBillCustomerRecord]" | "ABN124794%"      |
     #  | "ebhlaunch" | "[Evans].[dbo].[ChassisBillCustomerRecord]" | "AAR192758%"      |
      # | "ebhlaunch" | "[Evans].[dbo].[ChassisBillCustomerRecord]" | "AAR193564%"      |
-      | "ebhlaunch" | "[Evans].[dbo].[ChassisBillCustomerRecord]" | "AAR191231%"      |
+    #  | "ebhlaunch" | "[Evans].[dbo].[ChassisBillCustomerRecord]" | "AAR191231%"      |
+      | "ebhlaunch" | "[Evans].[dbo].[ChassisBillCustomerRecord]" | "ABC102008%"      |
 
                 #Change OriginalProNumber% everytime before running Test from @BillCustomer
 
@@ -224,7 +226,7 @@ Feature: Equipment Console Agent Adjustments Process Feature - Agent Reimburseme
    #   | "ABN124794"       | "ABN124794A"        | "ebhlaunch" | "[EBHLaunch].[dbo].[Orders]" | "[EBHLaunch].[dbo].[AGENT_STL_TRANS]" | "[EBHLaunch].[dbo].[AGENT_Settlements]" | "[EBHLaunch].[dbo].[ACCOUNTS]" | "[EBHLaunch].[dbo].[AGENT_SETTLEMENT_INFO]" | "[EBHLaunch].[dbo].[ORDER_BILLING]" | "[EBHLaunch].[dbo].[BILLING_CODES]" | "[EBHLaunch].[dbo].[ORDER_REFS]" | "[EBHLaunch].[dbo].[ORDER_Ops]" | "[EBHLaunch].[dbo].[Order_Misc]" | "[EBHLaunch].[dbo].[ORDER_Action_History]" | "[EBHLaunch].[dbo].[ORDER_Notes]" | "[EBHLaunch].[dbo].[ORDER_BILLLING_COM]" |
    #   | "AAR192758"       | "AAR192758A"        | "ebhlaunch" | "[EBHLaunch].[dbo].[Orders]" | "[EBHLaunch].[dbo].[AGENT_STL_TRANS]" | "[EBHLaunch].[dbo].[AGENT_Settlements]" | "[EBHLaunch].[dbo].[ACCOUNTS]" | "[EBHLaunch].[dbo].[AGENT_SETTLEMENT_INFO]" | "[EBHLaunch].[dbo].[ORDER_BILLING]" | "[EBHLaunch].[dbo].[BILLING_CODES]" | "[EBHLaunch].[dbo].[ORDER_REFS]" | "[EBHLaunch].[dbo].[ORDER_Ops]" | "[EBHLaunch].[dbo].[Order_Misc]" | "[EBHLaunch].[dbo].[ORDER_Action_History]" | "[EBHLaunch].[dbo].[ORDER_Notes]" | "[EBHLaunch].[dbo].[ORDER_BILLLING_COM]" |
     #  | "AAR193564"       | "AAR193564A"        | "ebhlaunch" | "[EBHLaunch].[dbo].[Orders]" | "[EBHLaunch].[dbo].[AGENT_STL_TRANS]" | "[EBHLaunch].[dbo].[AGENT_Settlements]" | "[EBHLaunch].[dbo].[ACCOUNTS]" | "[EBHLaunch].[dbo].[AGENT_SETTLEMENT_INFO]" | "[EBHLaunch].[dbo].[ORDER_BILLING]" | "[EBHLaunch].[dbo].[BILLING_CODES]" | "[EBHLaunch].[dbo].[ORDER_REFS]" | "[EBHLaunch].[dbo].[ORDER_Ops]" | "[EBHLaunch].[dbo].[Order_Misc]" | "[EBHLaunch].[dbo].[ORDER_Action_History]" | "[EBHLaunch].[dbo].[ORDER_Notes]" | "[EBHLaunch].[dbo].[ORDER_BILLLING_COM]" |
-      | "AAR191231"       | "AAR191231A"        | "ebhlaunch" | "[EBHLaunch].[dbo].[Orders]" | "[EBHLaunch].[dbo].[AGENT_STL_TRANS]" | "[EBHLaunch].[dbo].[AGENT_Settlements]" | "[EBHLaunch].[dbo].[ACCOUNTS]" | "[EBHLaunch].[dbo].[AGENT_SETTLEMENT_INFO]" | "[EBHLaunch].[dbo].[ORDER_BILLING]" | "[EBHLaunch].[dbo].[BILLING_CODES]" | "[EBHLaunch].[dbo].[ORDER_REFS]" | "[EBHLaunch].[dbo].[ORDER_Ops]" | "[EBHLaunch].[dbo].[Order_Misc]" | "[EBHLaunch].[dbo].[ORDER_Action_History]" | "[EBHLaunch].[dbo].[ORDER_Notes]" | "[EBHLaunch].[dbo].[ORDER_BILLLING_COM]" |
+      | "ABC102008"       | "ABC102008A"        | "ebhlaunch" | "[EBHLaunch].[dbo].[Orders]" | "[EBHLaunch].[dbo].[AGENT_STL_TRANS]" | "[EBHLaunch].[dbo].[AGENT_Settlements]" | "[EBHLaunch].[dbo].[ACCOUNTS]" | "[EBHLaunch].[dbo].[AGENT_SETTLEMENT_INFO]" | "[EBHLaunch].[dbo].[ORDER_BILLING]" | "[EBHLaunch].[dbo].[BILLING_CODES]" | "[EBHLaunch].[dbo].[ORDER_REFS]" | "[EBHLaunch].[dbo].[ORDER_Ops]" | "[EBHLaunch].[dbo].[Order_Misc]" | "[EBHLaunch].[dbo].[ORDER_Action_History]" | "[EBHLaunch].[dbo].[ORDER_Notes]" | "[EBHLaunch].[dbo].[ORDER_BILLLING_COM]" |
 
  #Change OriginalProNumber/ProNumberWithSuffix everytime before running Test from @RetrieveNewOrderPRo
 
