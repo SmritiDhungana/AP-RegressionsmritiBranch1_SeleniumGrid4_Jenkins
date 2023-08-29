@@ -4,7 +4,7 @@ Feature: Agent Commission Maintenance and Calculation Process Feature
 
 
 
-  
+
   #18
   @Regression @AgentCommissionMaintenance @FailureScreenShot
   Scenario Outline: Validate Agent Commission Maintenance in Launch Environment
